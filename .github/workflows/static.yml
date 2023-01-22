@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
-      - run: npm i
+      - run: npm i --legacy-peer-deps
       - run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v2
