@@ -53,6 +53,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write      # Required for deploying to Pages
+      id-token: write   # Required for verifying the deployment source
     needs: build
     steps:
       - name: Deploy to GitHub Pages
